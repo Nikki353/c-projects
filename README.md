@@ -20,7 +20,6 @@ Keywords cannot be used as a variable name, function and other expressions.
 
 # The reserved words in C include;
 
-S/N	KEYWORDS	MEANING
 1	auto <--	Used to define automatic storage class
 
 2	break	Used to terminate loop and switch statements
