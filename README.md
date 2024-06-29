@@ -1,12 +1,12 @@
 # c-projects
 
-#Keywords in C
-#List Of Key Words in C
+# Keywords in C
+# List Of Key Words in C
 Keywords are simply reserved words whose semantical meanings is already known to the compiler. If they are used outside their semantical meaning, it would result in a compilation error.
 
 There are 32 keywords in the C programming language, and each one has a predefined meaning which is known to the compiler, and as such shouldn't be used otherwise. As a C developer, you should be aware of their existence and never use them for other purposes other than their original use.
 
-#Properties of keywords in C
+# Properties of keywords in C
 
 Keywords in C has properties that should be noted when in use. Failure to adhere to these properties may result in unexpected behaviour.
 
@@ -16,9 +16,9 @@ Keywords has a semantic meaning known to the C compilers and their meaning canno
 
 Keywords cannot be used as a variable name, function and other expressions.
 
-#There 32 reserved keywords in C programming language.
+# There 32 reserved keywords in C programming language.
 
-#The reserved words in C include;
+# The reserved words in C include;
 
 S/N	KEYWORDS	MEANING
 1	auto	Used to define automatic storage class
