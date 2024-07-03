@@ -1,9 +1,7 @@
 #include<stdio.h>
-#include<stdlib.h>
 void main()
 {
     int num;
-    system("cls");
     printf("\n enter any number : ");
     scanf("%d",&num);
     if(num%2==0)
