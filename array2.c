@@ -9,7 +9,6 @@ void main()
     {
         printf("\n Enter [%d] element : ",j);
         scanf("%d",&num[j]);
-        system("cls");
         sum+=num[j];
     }
     for(i=0;i<number;i++)
