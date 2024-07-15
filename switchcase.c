@@ -47,7 +47,7 @@ void main()
            scanf("%d",&a);
            printf("\n enter b value : ");
            scanf("%d",&b);
-           c=a^2+b^2;
+           c=a*a+b*b;
            printf("\n the answer is : %d ",c);
         break;
 
