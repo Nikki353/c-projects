@@ -1,31 +1,42 @@
-#include<stdio.h>
-void main()
-{
-    int num,sum=0,i,m;
-    printf("\n enter any num : ");
-    scanf("%d",&m);
-    for(i=1;i<=m/2;i++)
-    {
-        if(num%i==0)
-        {
-           sum+=i;
-        }
+#include <stdio.h>
+
+int main() {
+    // Introduction: Array declaration and initialization
+    int arr[] = {1, 2, 2, 3, 4, 4, 5};  // Array with duplicate elements
+    int size = 7;  // Size of the array
+
+    // Output: Printing the original array
+    printf("Original array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);  // Accessing and printing each element of the array
     }
-    if(sum == m)
-    {
-        printf("\n %d is perfect num ",m);
-    }
-    else
-    {
-        if(sum>m)
-        {
-            printf("\n %d is abundant num ",m);
+    printf("\n");
+
+    // Program: Removing duplicate elements
+    int unique[size];  // Array to store unique elements
+    int k = 0;  // Index for unique array
+
+    for (int i = 0; i < size; i++) {
+        int duplicate = 0;  // Flag to check for duplicates
+        for (int j = 0; j < k; j++) {
+            if (arr[i] == unique[j]) {
+                duplicate = 1;  // Setting flag if duplicate is found
+                break;
+            }
         }
-        else
-        {
-            printf("\n %d is deficient num ",m);
+
+        if (!duplicate) {
+            unique[k++] = arr[i];  // Copying non-duplicate element to unique array
         }
     }
 
+    // Output: Printing the array after removing duplicates
+    printf("Array after removing duplicates: ");
+    for (int i = 0; i < k; i++) {
+        printf("%d ", unique[i]);  // Accessing and printing each element of the unique array
+    }
+    printf("\n");
+
+    return 0;
 }
 
