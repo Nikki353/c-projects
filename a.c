@@ -1,29 +1,32 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main() {
-    char str1[20] = "world";
-    char str2[20] = "world";
-    char str3[20];
+    char str[100];
+    int i, j;
+    int isPalindrome = 1;
 
-    // Concatenate str1 and str2 into str3
-    //strcpy(str3, str1); // Copy str1 into str3
-    strcat(str3, " ");  // Concatenate a space
-    strcat(str3, str2); // Concatenate str2 into str3
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
 
-    // Print the concatenated string
-    printf("Concatenated string: %s\n", str3);
+    // Remove newline character from fgets input
+    if (str[strlen(str) - 1] == '\n') {
+        str[strlen(str) - 1] = '\0';
+    }
 
-    // Length of str3
-    printf("Length of str3: %zu\n", strlen(str3));
+    // Ignore case while checking palindrome
+    for (i = 0, j = strlen(str) - 1; i < j; ++i, --j) {
+        if (tolower(str[i]) != tolower(str[j])) {
+            isPalindrome = 0;
+            break;
+        }
+    }
 
-    // Compare str1 and str2
-    if (strcmp(str1, str2) == 0)
-    {
-        printf("str1 and str2 are equal\n");
-    } else
-    {
-        printf("str1 and str2 are not equal\n");
+    if (isPalindrome) {
+        printf("The string is a palindrome.\n");
+    } else {
+        printf("The string is not a palindrome.\n");
     }
 
     return 0;
