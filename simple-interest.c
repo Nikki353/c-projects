@@ -1,23 +1,32 @@
 #include<stdio.h>
 void main()
 {
-    int amount,time,rate,si;
-    int pa;
+    float amount,time,rate,si,omi;
+    float pa;
     printf("Amount given : ");
-    scanf("%d",&amount);
+    scanf("%f",&amount);
     printf("No of months : ");
-    scanf("%d",&time);
+    scanf("%f",&time);
     printf("Rate of interest : ");
-    scanf("%d",&rate);
+    scanf("%f",&rate);
     system("cls");
-    printf("Actual amount given     : %d \n",amount);
-    printf("No of months            : %d \n",time);
-    printf("Rate of simple interest : %d \n",rate);
+
+
+    printf("Actual amount given     : %f \n",amount);
+    printf("No of months            : %f \n",time);
+    printf("Rate of simple interest : %f \n",rate);
     printf("\n");
-    si=amount*rate*time/100;
-    printf("Simple interest         : %d ",si);
+
+
+    omi=(amount*rate)/100;
+    printf("one month interest      : %f \n",omi);
+
+    si=(amount*rate*time)/100;
+    //si=(omi*time);
+    printf("Simple interest         : %f ",si);
+
     printf("\n");
     pa=si+amount;
-    printf("Amount payable          : %d ",pa);
+    printf("Amount payable          : %f ",pa);
     printf("\n");
 }
