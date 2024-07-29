@@ -1,12 +1,36 @@
-#include<stdio.h>
-void main()
-{
-    int i,sum=0;
-    for(i=0;i<=5;i++)
-    {
-        sum+=i;
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr;
+    int n;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    // Allocate memory dynamically
+    ptr = (int *) malloc(n * sizeof(int));
+
+    if (ptr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
     }
-    printf("\n Sum of natural numbers : %d ",sum);
-    printf("\n");
-    getch();
+
+    // Input elements
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d", ptr + i);
+    }
+
+    // Print elements
+    printf("Elements entered:\n");
+    for (int i = 0; i < n; ++i) {
+        printf("%d\n", *(ptr + i));
+    }
+
+    // Free dynamically allocated memory
+    free(ptr);
+
+    return 0;
 }

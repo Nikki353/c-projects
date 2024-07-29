@@ -1,8 +1,8 @@
 #include<stdio.h>
-void add(int a,int b);
-void sub(int a,int b);
-void mul(int a,int b);
-void divide(int a,int b);
+int add(int a,int b);
+int sub(int a,int b);
+int mul(int a,int b);
+float divide(int a,int b);
 
 void main()
 {
@@ -13,40 +13,40 @@ void main()
     scanf("%d",&num2);
     printf("\n\n");
 
-    void sum=add(num1,num2);
+    int sum=add(num1,num2);
     printf("\n The sum is : %d",sum);
     printf("\n");
 
-    void difference=sub(num1,num2);
+    int difference=sub(num1,num2);
     printf("\n The subtraction is : %d",difference);
     printf("\n");
 
-    void product=mul(num1,num2);
+    int product=mul(num1,num2);
     printf("\n The multiplication is : %d",product);
     printf("\n");
 
-    void quotient=divide(num1,num2);
-    printf("\n The division  is : %d",quotient);
+    float quotient=divide(num1,num2);
+    printf("\n The division  is : %f",quotient);
     printf("\n\n");
 
 }
 
-void add(int a,int b)
+int add(int a,int b)
 {
     return a+b;
 }
 
-void sub(int a,int b)
+int sub(int a,int b)
 {
     return a-b;
 }
 
-void mul(int a,int b)
+int mul(int a,int b)
 {
     return a*b;
 }
 
-void divide(int a,int b)
+float divide(int a,int b)
  {
     if (b==0)
     {
